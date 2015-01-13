@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="mega_todo">
+
+<head>
+    <title>angularjs TODO list</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="mainCont" ng-controller="MainCtrl">
+        <h1>My Todo list - Angularjs:</h1>
+        <div class="addArea">
+            <form>
+                <input name="addItemText" class="addItemText" ng-model="newItemText" type="text">
+                <button class="addItemBtn" ng-click="addItem()">Add</button>
+            </form>
+            <div>
+                <div class="itemsCompletedCounter">items completed: {{getCompletedItems().length}}</div>
+                <ul class="todoList">
+                    <li class="item" ng-repeat="item in todoList">
+                        <input class="itemCheck" type="checkbox" class="toggle" ng-model="item.done" ng-click="modifyItem($index, {'done': item.done })">
+                        <span class="itemLabel">
+{{item.text}}
+</span>
+                        <button class="itemDelete" ng-click="deleteItem($index)">X</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainCont"  ng-controller="MainCtrl">
+                <input ng-model='myVariable' type='text' />
+                {{myVariable}}
+            </div>
+</body>
+
+</html>
