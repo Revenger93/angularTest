@@ -31,7 +31,21 @@
             <div class="mainCont"  ng-controller="MainCtrl">
                 <input ng-model='myVariable' type='text' />
                 {{myVariable}}
+
+                <ul>
+                  <li ng-repeat="item in todoList | orderBy:'country'">
+                    {{ item.text }}
+                  </li>
+                </ul>
+
+
+
+
+
+
             </div>
+
+
 </body>
 
 </html>

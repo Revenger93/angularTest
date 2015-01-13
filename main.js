@@ -1,12 +1,14 @@
 angular.module('mega_todo', []);
 angular.module('mega_todo').controller('MainCtrl', function($scope) {
-    $scope.myVariable = 'ciao a tutti'
+    $scope.myVariable = 'ciaoNico'
     $scope.todoList = [{
         text: 'Dynamic Todo 1',
-        done: true
+        done: true,
+        country: 'Nico'
     }, {
         text: 'check the checklist 2',
-        done: false
+        done: false,
+        country: 'Asino'
     }];
     var addItem = function(text) {
         if (text)
